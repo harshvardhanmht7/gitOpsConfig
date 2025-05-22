@@ -1,0 +1,17 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: my-cluster
+  region: ap-south-1
+
+managedNodeGroups:
+  - name: t2micro-autoscaling
+    instanceType: t2.micro
+    minSize: 1
+    maxSize: 5
+    desiredCapacity: 2
+    volumeSize: 20
+    ssh:
+      allow: true
+      publicKeyName: ssh-public-key
