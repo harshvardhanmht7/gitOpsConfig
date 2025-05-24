@@ -8,7 +8,7 @@ image:
 
 # Kubernetes service configuration: type of service and port exposed inside the cluster
 service:
-  type: ClusterIP  # Kubernetes Service type (ClusterIP exposes only inside the cluster)
+  type: LoadBalancer  # Kubernetes Service type (ClusterIP exposes only inside the cluster , load balancer for external)
   port: 8080      # Port on which the service will be exposed inside the cluster
 
 # ServiceAccount configuration: controls whether to create a new ServiceAccount or use an existing one for a pod
