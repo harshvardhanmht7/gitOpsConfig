@@ -1,13 +1,17 @@
-replicaCount: 2
-
+# Number of replicas (pods) of your Spring Boot application to run in the cluster
+replicaCount: 2  # Number of pod replicas to run for your Spring Boot app
+# Docker image settings: specify the container image repository, tag, and pull policy
 image:
-  repository: harshvardhanmehta/demo
-  tag: latest
-  pullPolicy: IfNotPresent
+  repository: harshvardhanmehta/demo  # Docker image repository for your app
+  tag: latest                         # Docker image tag/version to deploy
+  pullPolicy: IfNotPresent            # When to pull the image from the registry
 
-
-
+# Kubernetes service configuration: type of service and port exposed inside the cluster
 service:
-  type: ClusterIP
-  port: 8080
+  type: ClusterIP  # Kubernetes Service type (ClusterIP exposes only inside the cluster)
+  port: 8080      # Port on which the service will be exposed inside the cluster
 
+# ServiceAccount configuration: controls whether to create a new ServiceAccount or use an existing one for a pod
+serviceAccount:
+  create: true   # Whether to create a new Kubernetes ServiceAccount for this app
+  name: ""      # Optional: specify an existing ServiceAccount name to use instead
