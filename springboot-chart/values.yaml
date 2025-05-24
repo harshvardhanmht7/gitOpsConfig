@@ -17,5 +17,23 @@ serviceAccount:
   name: ""      # Optional: specify an existing ServiceAccount name to use instead
 
 # Ingress configuration: enable or disable ingress resource creation
+# used for external connect from https or http
 ingress:
   enabled: false
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+
+persistence:
+  enabled: false
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
