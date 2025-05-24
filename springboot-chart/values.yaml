@@ -15,3 +15,7 @@ service:
 serviceAccount:
   create: true   # Whether to create a new Kubernetes ServiceAccount for this app
   name: ""      # Optional: specify an existing ServiceAccount name to use instead
+
+# Ingress configuration: enable or disable ingress resource creation
+ingress:
+  enabled: false
