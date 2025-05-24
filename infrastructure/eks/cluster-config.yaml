@@ -9,7 +9,7 @@ managedNodeGroups:
   - name: t2micro-autoscaling
     instanceType: t2.micro
     minSize: 1
-    maxSize: 5
+    maxSize: 20
     desiredCapacity: 2
     volumeSize: 20
     ssh:
